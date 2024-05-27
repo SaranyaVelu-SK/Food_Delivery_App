@@ -1,0 +1,34 @@
+{
+  "name": "fooddeliveryapp",
+  "version": "1.0.0",
+  "description": "Food Delivery App using React.js",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaranyaVelu-SK/Food_Delivery_App.git"
+  },
+  "keywords": [
+    "react.js",
+    "javascript",
+    "jsx"
+  ],
+  "author": "Saranya_S_K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaranyaVelu-SK/Food_Delivery_App/issues"
+  },
+  "homepage": "https://github.com/SaranyaVelu-SK/Food_Delivery_App#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
