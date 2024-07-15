@@ -1,8 +1,11 @@
 import { LOGO_URL } from "../utils/constants";
 import {useState} from 'react';
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
-    const [loginBtn,setLoginBtn] = useState('login')
+    const [loginBtn,setLoginBtn] = useState('login');
+    const onlineStatus = useOnlineStatus()
   return (
     <div className="header-div">
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -13,10 +16,12 @@ const Header = () => {
         <h2 style={{ paddingLeft: "10px" }}>S K Foods</h2>
       </div>
       <div className="nav-items">
+        <h3>Online  Status : {onlineStatus ? 'Online' : 'Offline'}</h3>
         <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact us</li>
+          <Link to='/' style={{textDecoration:'none',padding:'10px',fontSize:'24px',listStyleType:'none'}}><li>Home</li></Link>
+          <Link to ='/aboutus' style={{textDecoration:'none',padding:'10px',fontSize:'24px',listStyleType:'none'}}><li>About us</li></Link>
+          <Link to='/contactus' style={{textDecoration:'none',padding:'10px',fontSize:'24px',listStyleType:'none'}}><li>Contact us</li></Link>
+          <Link to ='/grocery' style={{textDecoration:'none',padding:'10px',fontSize:'24px',listStyleType:'none'}}><li>Grocery</li></Link>
           <li>
             <img
               src="https://cdn-icons-png.flaticon.com/128/4290/4290854.png"
